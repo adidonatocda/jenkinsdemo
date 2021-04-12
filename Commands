@@ -1,0 +1,8 @@
+
+docker build -t jenkins/cdademo:lts .
+
+docker run -d -p 10000:8080 -v b_jenkins_home:/var/jenkins_home --name jenkins-cdademo jenkins/cdademo:lts
+
+docker run -d --restart always -p 10000:8080 -v b_jenkins_home:/var/jenkins_home --name jenkins-cdademo jenkins/cdademo:lts
+
+
